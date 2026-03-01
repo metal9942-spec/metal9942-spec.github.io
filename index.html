@@ -1131,7 +1131,15 @@
 
     // 앱 초기화
     function initializeApp() {
+      console.log('=== 앱 초기화 시작 ===');
+      console.log('localStorage의 데이터:', localStorage.getItem('snc_app_data') ? '있음' : '없음');
+      
       loadDataFromLocalStorage();
+      
+      console.log('로드된 학생 수:', DATA.students.length);
+      console.log('로드된 학부모 수:', DATA.parents.length);
+      console.log('로드된 도서 수:', DATA.books.length);
+      
       initializeSelects();
     }
 
